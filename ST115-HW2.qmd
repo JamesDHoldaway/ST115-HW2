@@ -4,6 +4,11 @@ format: pdf
 author: "James Holdaway"
 editor: visual
 ---
+# Packages
+```{r}
+library(aRtsy)
+```
+
 ## Question #1
 **Install the aRtsy package. Show the code used to install the aRtsy package, but turn off the code chunk so it doesn’t evaluate.**
 
@@ -15,5 +20,24 @@ install.packages("aRtsy")
 ```
 
 The code install.packages("package-name") installs the contents of a package to your computer. library(package-name) loads that package along with its functions, and data to your R session. In order to actually use a R package you must ensure that its been installed to your machine, then load it into the session using library. 
+
+\newpage
+
+## Question #2
+**Create a level-1 section header at the top of your document at label it Packages. Next, under a Question-2 level two section header, make a code chunk and library the aRtsy package. We are going to use a function in this package to plot the Collatz conjecture. On your own, research and explain what the Collatz conjecture is. Then, write the Collatz conjecture equation using in-line LaTex code.**
+
+```{r}
+library(aRtsy)
+```
+
+The Collatz conjecture is a question that asks if you can bring any number down to one following one of two processes. 
+
+  1. If even: (n/2)
+  
+  2. If odd: (3n + 1)
+
+This process repeats with n being redefined as the output until n = 1. 
+
+The conjecture can be represented like this: $$f(n) = \begin{cases} \frac{n}{2} & \text{if n is even}\\ 3n + 1 & \text{if n is odd}\end{cases}$$
 
 \newpage
