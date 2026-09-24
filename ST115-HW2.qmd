@@ -4,4 +4,16 @@ format: pdf
 author: "James Holdaway"
 editor: visual
 ---
+## Question #1
+**Install the aRtsy package. Show the code used to install the aRtsy package, but turn off the code chunk so it doesn’t evaluate.**
 
+**Next, explain the difference between install.packages and library**
+
+```{r}
+#| eval: FALSE
+install.packages("aRtsy")
+```
+
+The code install.packages("package-name") installs the contents of a package to your computer. library(package-name) loads that package along with its functions, and data to your R session. In order to actually use a R package you must ensure that its been installed to your machine, then load it into the session using library. 
+
+\newpage
