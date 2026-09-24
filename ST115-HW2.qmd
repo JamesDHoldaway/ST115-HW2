@@ -1,0 +1,7 @@
+---
+title: "ST115-HW2"
+format: pdf
+author: "James Holdaway"
+editor: visual
+---
+
