@@ -73,10 +73,22 @@ This could be troublesome if you are analyzing a specific case of the Collatz co
 The set.seed() function allows you to specify which seeds/integers you use as your starting point.This allows us to achieve the same result every time because we are specifying the starting point rather than having it chosen for us. 
 
 ```{r}
-set.seed(2)
+set.seed(1)
   canvas_collatz(
     colors = c("orange"),
-    n = c(1, 2, 3, 5, 7, 11, 13, 17, 23, 29)
+    n = 10
   )
 ```
 
+\newpage
+
+## Question #4
+**Contrast the code below with the code shown in question 3. What is this code doing differently than the previous chunk? That is, what’s different both in the code, and the corresponding result? Next, explain if it would be appropriate to include set.seed(1) with the code below.**
+```{r}
+canvas_collatz(
+  colors = c("blue"),
+  n = 1:20
+)
+```
+
+This code is producing the same result upon each render without the set.seed() function. The difference in code has to to with the n argument. Question #3's code has n = 10 for 10 random integers, whereas this code has n = 1:20 which I believe means the numbers 1 through 20 are being used as the starting point for the conjecture. Including set.seed(1) in this code is not necessary because it has a set starting point rather than a randomly selected starting point. 
