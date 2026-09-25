@@ -41,3 +41,42 @@ This process repeats with n being redefined as the output until n = 1.
 The conjecture can be represented like this: $$f(n) = \begin{cases} \frac{n}{2} & \text{if n is even}\\ 3n + 1 & \text{if n is odd}\end{cases}$$
 
 \newpage
+
+## Question #3
+
+#### Part A
+
+**Please see the following function canvas_collatz() from the aRtsy package in R. In 2-3 sentences, describe what this function is doing.**
+```{r}
+  canvas_collatz(
+    colors = c("blue"),
+    n = 10
+  )
+```
+
+When run, this function draws the Collatz conjecture on a canvas. The color argument specifies which color the artwork should be made in. The argument n specifies how many random starting integers should be used for the lines. 
+
+#### Part B
+
+**When you run the above code multiple times, you get different output. With this information…**
+
+**– Explain why you get different out every time you run the code**
+
+**– Explain why this might be troublesome when trying to put this code into your .qmd file**
+
+**– Pull the help file up for set.seed(), and explain how this can be used to make sure we get the same result every time. Then, use the set.seed() function correctly with your favorite number, and include the code above in a code chunk**
+
+Each run produces a different output because n = 10 means that 10 random integers are chosen as the starting value for the Collatz conjecture. Their nature of randomness means that they will be different each time, and consequently so will the graph of the conjecture. 
+
+This could be troublesome if you are analyzing a specific case of the Collatz conjecture. Random integers will not produce the same results. 
+
+The set.seed() function allows you to specify which seeds/integers you use as your starting point.This allows us to achieve the same result every time because we are specifying the starting point rather than having it chosen for us. 
+
+```{r}
+set.seed(2)
+  canvas_collatz(
+    colors = c("orange"),
+    n = c(1, 2, 3, 5, 7, 11, 13, 17, 23, 29)
+  )
+```
+
