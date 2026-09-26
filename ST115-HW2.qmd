@@ -38,7 +38,7 @@ The Collatz conjecture is a question that asks if you can bring any number down 
 
 This process repeats with n being redefined as the output until n = 1. 
 
-The conjecture can be represented like this: $$f(n) = \begin{cases} \frac{n}{2} & \text{if n is even}\\ 3n + 1 & \text{if n is odd}\end{cases}$$
+The conjecture can be represented like this: $f(n) = \begin{cases} \frac{n}{2} & \text{if n is even}\\ 3n + 1 & \text{if n is odd}\end{cases}$
 
 \newpage
 
@@ -91,4 +91,4 @@ canvas_collatz(
 )
 ```
 
-This code is producing the same result upon each render without the set.seed() function. The difference in code has to to with the n argument. Question #3's code has n = 10 for 10 random integers, whereas this code has n = 1:20 which I believe means the numbers 1 through 20 are being used as the starting point for the conjecture. Including set.seed(1) in this code is not necessary because it has a set starting point rather than a randomly selected starting point. 
+This code is producing the same result upon each render without the set.seed() function. The difference in code has to do with the n argument. Question #3's code has n = 10 for 10 random integers, whereas this code has n = 1:20 which I believe means the numbers 1 through 20 are being used as the starting point for the conjecture. Including set.seed(1) in this code is not necessary because it has a set starting point rather than a randomly selected starting point. 
